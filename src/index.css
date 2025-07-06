@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar{
+  height: 100vh;
+  background-color: black !important;
+}
+
+.task-card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.task-card .badge {
+  font-size: 0.8rem;
+}
+
+.task-card h5 {
+  font-size: 1.25rem;
+}
+
+.task-card p {
+  font-size: 0.9rem;
+}
