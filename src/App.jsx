@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Hero from './components/hero';
 import Dashboard from './pages/Dashboard';
 import AllTasks from './pages/AllTasks'
 import AddTask from './pages/AddNewTask';
+import Hero from './components/Hero';
 
 
 const App = () => {
