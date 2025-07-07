@@ -13,14 +13,28 @@ export const fetchData = createAsyncThunk("todo/fetchData", async (_, { rejectWi
 });
 
 
- export const createTodo = createAsyncThunk("todo/createTodo",async(todo,{rejectWithValue})=>{
+//  export const createTodo = createAsyncThunk("todo/createTodo",async(todo,{rejectWithValue})=>{
+//     try {
+//         const res = await axiosInstances.post("/.json",todo);
+//         return {...todo,id:res.data.name};
+//     } catch (error) {
+//         return rejectWithValue(error.message)
+//     }
+// })
+
+export const createTodo = createAsyncThunk(
+  "todo/createTodo",
+  async (todo, { rejectWithValue }) => {
     try {
-        const res = await axiosInstances.post("/.json",todo);
-        return {...todo,id:res.data.name};
+      const res = await axiosInstances.post("/.json", todo);
+      return { ...todo, id: res.data.name };
     } catch (error) {
-        return rejectWithValue(error,message)
+      console.error("❌ createTodo error:", error);  // log the full error
+      return rejectWithValue(error.response?.data?.error || error.message);
     }
-})
+  }
+);
+
 
  export const deleteTodo = createAsyncThunk("todo/deleteTodo",async(id,{rejectWithValue})=>{
     try {
