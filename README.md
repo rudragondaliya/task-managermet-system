@@ -1,12 +1,53 @@
-# React + Vite
+ 📋 Task Management System - React + Firebase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Demo:**
+[https://task-managermet-system.vercel.app](https://task-managermet-system.vercel.app)
 
-Currently, two official plugins are available:
+### 🔧 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+• Add new tasks with title, description, due date and time
+• View all tasks in a modern UI
+• Task status management (Pending or Completed)
+• Realtime CRUD operations connected to Firebase Realtime Database
+• Responsive Bootstrap-based design
+• Built with Redux Toolkit and Axios
+• Deployed on Vercel
 
-## Expanding the ESLint configuration
+### 🧩 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+• React + Vite
+• Firebase (Realtime Database)
+• Redux Toolkit
+• Axios
+• React Router DOM
+• Bootstrap
+
+### 🚀 Project Structure
+
+* `App.jsx` – Routing and layout
+* `/pages` – Contains main pages like Dashboard, AllTasks, and AddTask
+* `/components` – UI components like Hero, Navbar, etc.
+* `/features` – Redux slice and thunk logic
+* `/api/axiosInstances.js` – Configured Axios instance for Firebase
+
+### 🛠️ Setup Instructions
+
+1. Clone the repository
+2. Run `npm install` to install dependencies
+3. Create a `.env` file in the root with Firebase config:
+
+   ```
+   VITE_FIREBASE_DATABASE_URL=https://your-db.firebaseio.com/
+   ```
+4. Run the development server:
+
+   ```
+   npm run dev
+   ```
+
+### ✨ Deployed App
+
+Check it out live:
+**[https://task-managermet-system.vercel.app](https://task-managermet-system.vercel.app)**
+
+---
